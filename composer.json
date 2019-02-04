@@ -29,7 +29,19 @@
               "reference": "master" 
             }
           }
-        }    
+        },
+        "gsb/gsb_feature_voices_ct package": {
+          "type": "package",
+          "package": {
+            "name": "gsb/gsb_feature_voices_ct", 
+            "version": "1.05",   
+            "source": {
+              "url": "https://github.com/gsb-public/gsb_feature_voices_ct", 
+              "type": "git",
+              "reference": "master" 
+            }
+          }
+        }         
     },
     "require": {
         "php": ">=5.2.5",
@@ -54,8 +66,11 @@
         "components/rubaxa-sortable": "^1.6",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.5",
-        "gsb/gsb_feature_wysiwyg": "5.17",
-        "drupal/admin_menu": "3.0-rc5"
+        "drupal/admin_menu": "3.0-rc5",
+        "drupal/admin_views": "1.6",        
+        "drupal/breakpoints": "1.6",
+        "gsb/gsb_feature_voices_ct": "1.05",
+        "gsb/gsb_feature_wysiwyg": "5.17"       
     },
     "conflict": {
         "drupal/core": "8.*"
