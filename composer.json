@@ -17,77 +17,69 @@
         "npm and bower packages": {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        }
+        },
+        "gsb_public_profile": {
+            "type": "package",
+            "package": {
+                "name": "gsb_public_profile", 
+                "type": "drupal-profile",
+                "version": "1.00",
+                "source": {
+                    "url": "https://github.com/gsb-public/gsb_public_profile", 
+                    "type": "git",
+                    "reference": "master" 
+                }
+            }
+        },
+        "gsb_feature_wysiwyg": {
+          "type": "package",
+          "package": {
+            "name": "gsb_feature_wysiwyg", 
+            "version": "5.17",
+            "source": {
+              "url": "https://github.com/gsb-public/gsb_feature_wysiwyg", 
+              "type": "git",
+              "reference": "master" 
+            }
+          }
+        }        
     },
     "require": {
+        "php": ">=5.2.5",
+        "ext-curl": "*",
+        "ext-gd": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*",
+        "ext-pdo_mysql": "*",
+        "ext-xml": "*",        
         "composer/installers": "^1.2",
         "cweagans/composer-patches": "^1.6",
+        "drupal/drupal": "~7.0",        
         "drupal-composer/drupal-scaffold": "^2.2",
         "drupal/console": "^1.0.2",
-        "drupal/core": "~7.63",
         "drush/drush": "^9.0.0",
+        "composer/semver": "^1.4",
+        "cweagans/composer-patches": "^1.6",
+        "drupal/composer_autoloader": "^1.0",
+        "symfony/filesystem": "~2.7|^3",   
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "components/rubaxa-sortable": "^1.6",
-        "drupal/admin_toolbar": "^1.18",
-        "drupal/big_pipe_sessionless": "^1.2",
-        "drupal/block_field": "^1.0@alpha",
-        "drupal/cache_control_override": "^1.0",
-        "drupal/chosen": "^2.0",
-        "drupal/clean_maintenance": "^1.2",
-        "drupal/components": "^1.0",
-        "drupal/conditional_fields": "^1.0@alpha",
-        "drupal/config_split": "^1.1",
-        "drupal/config_tools": "^1.0",
-        "drupal/contribute": "^1.0@beta",
-        "drupal/cshs": "^1.0@beta",
-        "drupal/easy_breadcrumb": "^1.6",
-        "drupal/field_group": "^3.0",
-        "drupal/linkit": "5.x-dev",
-        "drupal/menu_block": "1.x-dev",
-        "drupal/menu_breadcrumb": "^1.6",
-        "drupal/menu_link_weight": "^1.0@beta",
-        "drupal/paragraphs": "^1.2",
-        "drupal/pathauto": "^1.0",
-        "drupal/prepopulate": "^2.0@alpha",
-        "drupal/redirect": "^1.0",
-        "drupal/simple_sitemap": "^2.11",
-        "drupal/stage_file_proxy": "^1.0",
-        "drupal/twig_tweak": "^2.0",
-        "harvesthq/chosen": "^1.8",
-        "kalamuna/autogrow_textarea": "^1.0",
+        "drupal/admin_menu": "3.0-rc5",
         "oomphinc/composer-installers-extender": "^1.1",
         "vlucas/phpdotenv": "^2.5",
-        "gsb-public/gsb_public_profile": "^1.00"
+        "gsb_public_profile": "^1.00",
+        "gsb_feature_wysiwyg": "^5.17"
     },
     "conflict": {
-        "drupal/drupal": "*"
+        "drupal/core": "8.*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
-        "classmap": [
-            "scripts/composer/ScriptHandler.php"
-        ]
     },
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "run-scaffold": "if [ ! -f ./web/index.php ]; then composer drupal-scaffold; fi",
-        "pre-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "pre-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
-        ],
-        "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "@run-scaffold",
-            "if hash npm; then npm install; fi"
-        ],
-        "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
-            "@run-scaffold"
-        ],
         "test": [
             "if hash npm; then npm test; fi",
             "phpcs --config-set installed_paths vendor/drupal/coder/coder_sniffer",
@@ -98,7 +90,6 @@
           "composer install",
           "composer test"
         ]
-
     },
     "extra": {
         "installer-types": [
