@@ -22,8 +22,7 @@
           "type": "package",
           "package": {
             "name": "gsb/gsb_feature_wysiwyg", 
-            "version": "5.17", 
-            "type": "drupal-custom-module",      
+            "version": "5.17",    
             "source": {
               "url": "https://github.com/gsb-public/gsb_feature_wysiwyg", 
               "type": "git",
@@ -48,7 +47,6 @@
         "drupal/console": "^1.0.2",
         "drush/drush": "^9.0.0",
         "composer/semver": "^1.4",
-        "cweagans/composer-patches": "^1.6",
         "drupal/composer_autoloader": "^1.0",
         "symfony/filesystem": "~2.7|^3",   
         "webflo/drupal-finder": "^1.0.0",
@@ -92,7 +90,6 @@
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
