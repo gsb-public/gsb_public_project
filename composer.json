@@ -36,11 +36,11 @@
           "package": {
             "name": "gsb/gsb_feature_voices_ct", 
             "type": "drupal-custom-module",
-            "version": "1.05",   
+            "version": "dev-release-1.06",   
             "source": {
               "url": "https://github.com/gsb-public/gsb_feature_voices_ct", 
               "type": "git",
-              "reference": "master" 
+              "reference": "release-1.06" 
             }
           }
         }         
@@ -71,7 +71,7 @@
         "drupal/admin_menu": "3.0-rc5",
         "drupal/admin_views": "1.6",        
         "drupal/breakpoints": "1.6",
-        "gsb/gsb_feature_voices_ct": "1.05",
+        "gsb/gsb_feature_voices_ct": "dev-release-1.06",
         "gsb/gsb_feature_wysiwyg": "5.17"       
     },
     "conflict": {
