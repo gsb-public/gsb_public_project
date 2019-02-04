@@ -18,6 +18,19 @@
             "type": "composer",
             "url": "https://asset-packagist.org"
         },
+        "gsb/gsb_feature_msx_fellows_ct package": {
+          "type": "package",
+          "package": {
+            "name": "gsb/gsb_feature_msx_fellows_ct", 
+            "type": "drupal-custom-module",
+            "version": "6.03",    
+            "source": {
+              "url": "https://github.com/gsb-public/gsb_feature_msx_fellows_ct", 
+              "type": "git",
+              "reference": "6.03" 
+            }
+          }
+        },        
         "gsb/gsb_feature_wysiwyg package": {
           "type": "package",
           "package": {
@@ -27,7 +40,7 @@
             "source": {
               "url": "https://github.com/gsb-public/gsb_feature_wysiwyg", 
               "type": "git",
-              "reference": "master" 
+              "reference": "5.17" 
             }
           }
         },
@@ -71,6 +84,7 @@
         "drupal/admin_menu": "3.0-rc5",
         "drupal/admin_views": "1.6",        
         "drupal/breakpoints": "1.6",
+        "gsb/gsb_feature_msx_fellows_ct": "6.03",
         "gsb/gsb_feature_voices_ct": "dev-release-1.06",
         "gsb/gsb_feature_wysiwyg": "5.17"       
     },
