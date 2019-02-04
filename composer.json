@@ -22,6 +22,7 @@
           "type": "package",
           "package": {
             "name": "gsb/gsb_feature_wysiwyg", 
+            "type": "drupal-custom-module",
             "version": "5.17",    
             "source": {
               "url": "https://github.com/gsb-public/gsb_feature_wysiwyg", 
@@ -34,6 +35,7 @@
           "type": "package",
           "package": {
             "name": "gsb/gsb_feature_voices_ct", 
+            "type": "drupal-custom-module",
             "version": "1.05",   
             "source": {
               "url": "https://github.com/gsb-public/gsb_feature_voices_ct", 
@@ -106,6 +108,8 @@
                 "type:npm-asset"
             ],
             "web/profiles/{$name}": ["type:drupal-profile"],
+            "modules/contrib/{$name}": ["type:drupal-module"],
+            "modules/custom/{$name}": ["type:drupal-custom-module"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
