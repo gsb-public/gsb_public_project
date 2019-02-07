@@ -114,7 +114,7 @@
             "npm-asset"
         ],
         "installer-paths": {
-            ".": ["type:drupal-core"],
+            "./": ["type:drupal-core"],
             "profiles/libraries/{$name}": [
                 "type:drupal-library",
                 "type:component",
