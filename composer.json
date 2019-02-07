@@ -114,17 +114,17 @@
             "npm-asset"
         ],
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/libraries/{$name}": [
+            ".": ["type:drupal-core"],
+            "profiles/libraries/{$name}": [
                 "type:drupal-library",
                 "type:component",
                 "type:bower-asset",
                 "type:npm-asset"
             ],
-            "web/profiles/{$name}": ["type:drupal-profile"],
-            "modules/contrib/{$name}": ["type:drupal-module"],
-            "modules/custom/{$name}": ["type:drupal-custom-module"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "profiles/{$name}": ["type:drupal-profile"],
+            "profiles/modules/contrib/{$name}": ["type:drupal-module"],
+            "profiles/modules/custom/{$name}": ["type:drupal-custom-module"],
+            "themes/contrib/{$name}": ["type:drupal-theme"],
             "drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
